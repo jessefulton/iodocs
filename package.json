@@ -31,7 +31,7 @@
     "supervisor": ">= 0.5.x"
   },
   "devDependencies": {},
-  "main": "index",
+  "main": "app",
   "engines": {
     "node": ">= 0.4.0",
     "npm": ">= 1.1.49"
