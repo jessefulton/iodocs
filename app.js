@@ -54,7 +54,7 @@ function initialize(configFile, apisConfigFile) {
 
     // Configuration
     try {
-        var config = require(configFile);
+        var config = typeof(configFile) === "string" ? require(configFile) : configFile;
     } catch(e) {
         console.error("File " + configFile + " not found or is invalid.  Try: `cp config.json.sample config.json`");
         process.exit(1);
@@ -86,7 +86,7 @@ function initialize(configFile, apisConfigFile) {
     //
 
     try {
-        var apisConfig = require(apisConfigFile);
+        var apisConfig = typeof(apisConfigFile) === "string" ? require(apisConfigFile) : apisConfigFile;
         if (config.debug) {
             console.log(util.inspect(apisConfig));
         }
